@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  kategoriId: 1
+  baslik: MyString
+  aciklama: MyText
+  icerik: MyText
+  foto: MyString
+  tarih: 2019-05-05 16:56:36
+  okunma: 1
+  slug: MyString
+
+two:
+  kategoriId: 1
+  baslik: MyString
+  aciklama: MyText
+  icerik: MyText
+  foto: MyString
+  tarih: 2019-05-05 16:56:36
+  okunma: 1
+  slug: MyString

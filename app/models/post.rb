@@ -2,7 +2,7 @@ class Post < ApplicationRecord
   extend FriendlyId
   friendly_id :baslik, use: :slugged
   
-  belongs_to :author
+  belongs_to :author, :optional => true
   scope :most_recent, -> {order(id: :desc)}
   
   def should_generate_new_friendly_id?

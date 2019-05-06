@@ -4,7 +4,7 @@
 							 <li><%= link_to 'Blog', root_path, class: "#{yield(:blog_active)}" %></li>
 							<li  class="cat-1"> <%= link_to 'Hakkımda', hakkimda_path, class: "#{yield(:hakkimda_active)}" %></li>
 							<li  class="cat-2"><%= link_to 'İletişim', iletisim_path, class: "nav-link #{yield(:iletisim_active)}" %></li>
-
+                            <li  class="cat-"><%= link_to 'Gönderilerim', authors_posts_path, class: "nav-link #{yield(:author)}" %></li>
 						</ul>
 						<!-- /nav -->
 

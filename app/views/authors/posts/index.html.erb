@@ -1,0 +1,14 @@
+<% provide(:page_title, 'Tüm Yazılar') %>
+<% provide(:author, 'active') %>
+
+<div class="row">
+    <div>
+    <%= link_to 'Yeni yazı', new_authors_post_path, class: 'btn btn-primary btn-lg' %>
+    </div><br>
+    <table class="table table-striped">
+        <tr>
+            <td colspan="4">Başlık</td>
+        </tr>
+        <%= render @posts %>
+    </table>
+</div>

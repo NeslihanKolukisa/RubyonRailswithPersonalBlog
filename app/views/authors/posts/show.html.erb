@@ -1,6 +1,10 @@
 <% provide(:page_title, @post.baslik) %>
-<% provide(:blog_active, 'active') %>
+<% provide(:author, 'active') %>
 
+<div>
+    <%= link_to 'Düzenle', edit_authors_post_path(@post), class: 'btn btn-sm btn-warning' %>
+    <%= link_to 'Sil', authors_post_path(@post), method: :delete, data:{confirm: 'Silmek istediğinize emin misiniz?'}, class: 'btn btn-sm btn-danger' %>
+</div>
 
 	<div class="row">
 					<!-- Post content -->

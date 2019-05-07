@@ -37,6 +37,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
+  gem 'pry-rails'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
@@ -66,3 +67,6 @@ gem 'bootstrap'
 gem 'jquery-rails'
 gem 'friendly_id', '~> 5.2.4' # Note: You MUST use 5.0.0 or greater for Rails 4.0+
 gem 'devise'
+gem 'annotate'
+gem 'will_paginate', '~> 3.1.0'
+gem 'acts-as-taggable-on', '~> 6.0'

@@ -12,67 +12,80 @@
   <% end %>
 
 <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-4">
         <div class="card" style="width: 18rem;">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
+              <% if @post.new_record? %>
+                <h5 class="card-title">Yeni yazı</h5>
+              <% else %>
+              <h5 class="card-title">
+                  <b>Düzenle</b>
+                  <span class="thin-text"> <%= @post.baslik %></span>
+              </h5>
+
+              <% end %>
           </div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Vestibulum at eros</li>
+            <li class="list-group-item">
+                 <div class="field">
+                    <%= form.label :kategoriId %><br>
+                    <%= form.number_field :kategoriId, class:'form-control' %>
+                  </div>
+            </li>
+            <li class="list-group-item">
+              <div class="field">
+                <%= form.label :baslik %><br>
+                <%= form.text_field :baslik, class:'form-control' %>
+              </div>
+            </li>
+            <li class="list-group-item">
+                   <div class="field">
+                    <%= form.label :aciklama %><br>
+                    <%= form.text_area :aciklama, class:'form-control' %>
+                  </div>
+            </li>
+             <li class="list-group-item">
+                   <div class="field">
+                    <%= form.label 'Etiketler' %><br>
+                    <%= form.text_area :tag_list, class:'form-control' %>
+                  </div>
+            </li>
+             <li class="list-group-item">
+                 <div class="field">
+                <%= form.label :foto %><br>
+                <%= form.text_field :foto, class:'form-control' %>
+              </div>
+            </li>
+            <li class="list-group-item">
+                <div class="field">
+                    <%= form.label :tarih %><br>
+                    <%= form.datetime_select :tarih, class:'form-control' %>
+                  </div>
+
+            </li>
+            <li class="list-group-item">
+                <div class="field">
+                <%= form.label :okunma %><br>
+                <%= form.number_field :okunma, class:'form-control' %>
+              </div>
+            </li>
+            <li class="list-group-item">
+                    <div class="actions">
+                    <%= form.submit "Kaydet", class:'btn btn-success btn-block' %>
+                  </div>
+            </li>
           </ul>
-          <div class="card-body">
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
-          </div>
         </div>
-        <div class="field">
-    <%= form.label :kategoriId %>
-    <%= form.number_field :kategoriId %>
-  </div>
-
-  <div class="field">
-    <%= form.label :baslik %>
-    <%= form.text_field :baslik %>
-  </div>
-  
-   <div class="field">
-    <%= form.label :aciklama %>
-    <%= form.text_area :aciklama %>
-  </div>
-
- <div class="field">
-    <%= form.label :foto %>
-    <%= form.text_field :foto %>
-  </div>
-
-  <div class="field">
-    <%= form.label :tarih %>
-    <%= form.datetime_select :tarih %>
-  </div>
-
-  <div class="field">
-    <%= form.label :okunma %>
-    <%= form.number_field :okunma %>
-  </div>
+        <% if @post.persisted? %>
+            <%= link_to 'Show', @post %> |
+        <% end %>
+        <%= link_to 'Back', authors_posts_path %>
     </div>
     
-    <div class="col-md-9">
+    <div class="col-md-8">
           <div class="field">
-    <%= form.label :icerik %>
     <%= form.text_area :icerik %>
   </div>
     </div>
 </div>
-  
-
- 
-
-
- 
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
 <% end %>

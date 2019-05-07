@@ -1,6 +1,5 @@
 <% provide(:page_title, "Düzenle #{@post.baslik}") %>
 <% provide(:author, 'active') %>
-<h1>Editing Post</h1>
 
 <%= render 'form', post: @post, url: authors_post_url(@post)  %>
 

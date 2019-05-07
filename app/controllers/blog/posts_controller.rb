@@ -4,16 +4,20 @@ module Blog
       # GET /posts
       # GET /posts.json
       def index
-        @posts = Post.most_recent
+       @posts = stroage.list_for(params[:page], params[:tag])
       end
     
       # GET /posts/1
       # GET /posts/1.json
       def show
-             @post = Post.friendly.find(params[:id])
+             @post = stroage.friendly.find(params[:id])
       end
     
-
+      private
+      
+      def stroage
+          Post.yayinlanma
+      end
     
     end
 end

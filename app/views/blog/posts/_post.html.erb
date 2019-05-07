@@ -2,15 +2,19 @@
 <!-- post -->
 					<div class="col-md-4">
 						<div class="post">
-							<a class="post-img" href="blog-post.html"><img src="https://colorlib.com/preview/theme/webmag/img/post-3.jpg" alt=""></a>
+						    <%= link_to  post, class: 'post-img' do  %>
+						    	<img src="https://colorlib.com/preview/theme/webmag/img/post-3.jpg" alt="">
+						    <% end %>
+						
 							<div class="post-body">
 								<div class="post-meta">
 									<%=link_to post.baslik, post, class:"post-category cat-1" %>
 									<p><%= raw post.tags.map{ |t| link_to t.name, posts_path(tag: t.name) }.join(', ') %></p>
 									<span class="post-date"><%= post.display_day_published %></span>
 								</div>
-								<h3 class="post-title"><%= truncate(post.aciklama, length:100) %></h3>
-								<%= link_to 'Devamını Oku', post, class:'btn btn-read' %>
+								<%= link_to post do %>
+								    <h3 class="post-title"><%= truncate(post.aciklama, length:100) %></h3>
+								<% end %>
 							</div>
 						</div>
 					</div>

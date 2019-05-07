@@ -20,4 +20,10 @@ class Author < ApplicationRecord
          :recoverable, :rememberable, :validatable
          
   has_many :posts
+  
+  validates_presence_of :name, on: :update, :message => 'İsim alanı gerekli.'
+  
+  def change_password(attrs)
+      update(password: attrs[:new_password], password_configuration: attrs[:new_password_confirmation])
+  end
 end

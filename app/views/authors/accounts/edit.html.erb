@@ -1,0 +1,76 @@
+<div class="row">
+  <div class="col-md-6"> 
+    <%= form_tag authors_info_path, method: :put do %>
+        <%= fields_for :author do |f| %>
+        <div class="card">
+        <div class="card-block" style="padding:10px">
+            <div class="card-title">
+                Temel Bilgiler
+            </div>
+        </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                 <div class="field">
+                    <%= f.label :'İsim' %><br>
+                    <%= f.text_field :name, value:current_author.name, class:'form-control' %>
+                  </div>
+            </li>
+            <li class="list-group-item">
+              <div class="field">
+                <%= f.label :Email %><br>
+                <%= f.text_field :email, value:current_author.email, class:'form-control' %>
+              </div>
+            </li>
+            <li class="list-group-item">
+                   <div class="field">
+                    <%= f.label :Biografi %><br>
+                    <%= f.text_area :bio, value:current_author.bio, class:'form-control' %>
+                  </div>
+            </li>
+            <li class="list-group-item">
+                <%= f.submit "Bilgileri Güncelle", class: 'btn btn-primary' %>
+            </li>
+          </ul>
+        </div>
+        <% end %>
+    <% end %>
+     </div> 
+
+    <div class="col-md-6">
+      <%= form_tag authors_change_password_path, method: :put do %>
+      <%= fields_for :author do |f| %>
+        <div class="card">
+        <div class="card-block" style="padding:10px">
+            <div class="card-title">
+                Şifreyi değiştir
+            </div>
+        </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                 <div class="field">
+                    <%= f.label :'Şimdiki Şifre' %><br>
+                    <%= f.password_field :current_password, class:'form-control' %>
+                  </div>
+            </li>
+            <li class="list-group-item">
+              <div class="field">
+                <%= f.label :'Yeni Şifre' %><br>
+                <%= f.password_field :new_password, class:'form-control' %>
+              </div>
+            </li>
+            <li class="list-group-item">
+                   <div class="field">
+                    <%= f.label :'Şifreyi Doğrular' %><br>
+                    <%= f.password_field :new_password_confirmation, class:'form-control' %>
+                  </div>
+            </li>
+            <li class="list-group-item">
+                <%= f.submit "Şifreyi Güncelle", class: 'btn btn-warning' %>
+            </li>
+          </ul>
+        </div>
+         <% end %>
+         <% end %>
+    </div>
+
+</div>

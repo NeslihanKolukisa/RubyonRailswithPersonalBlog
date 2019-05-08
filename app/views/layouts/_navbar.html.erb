@@ -40,7 +40,7 @@
 				<div id="nav-aside">
 					<!-- nav -->
 					<div class="section-row">
-					    <h2>Admin</h2>
+					    <%= current_author.display_name %>
 						<ul class="nav-aside-menu">
 							<li><%= link_to 'Gönderilerim', authors_posts_path, class:" #{yield(:author)}" %></li>
 							<li><%= link_to 'Hesap', authors_account_path, class:" #{yield(:author)}" %></li>

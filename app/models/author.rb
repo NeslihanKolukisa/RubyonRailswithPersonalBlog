@@ -26,4 +26,20 @@ class Author < ApplicationRecord
   def change_password(attrs)
       update(password: attrs[:new_password], password_configuration: attrs[:new_password_confirmation])
   end
+  
+  def gravatar_image_url
+      "https://www.gravatar.com/avatar/#{gravatar_hash}"
+  end
+  
+  def gravatar_hash
+      Digest::MD5.hexdigest(email.downcase)
+  end
+  
+  def display_name
+      if name.present?
+          name
+      else
+          "Üye"
+      end
+  end
 end

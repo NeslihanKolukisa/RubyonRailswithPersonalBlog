@@ -10,6 +10,9 @@
         </div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">
+                <%= image_tag(current_author.gravatar_image_url) %>
+            </li>
+            <li class="list-group-item">
                  <div class="field">
                     <%= f.label :'İsim' %><br>
                     <%= f.text_field :name, value:current_author.name, class:'form-control' %>

@@ -4,10 +4,11 @@
 <div class="row">
     <div>
     <%= link_to 'Yeni yazı', new_authors_post_path, class: 'btn btn-primary btn-lg' %>
-    </div><br>
-    <table class="table table-striped">
+    </div>  &nbsp;&nbsp; <%= link_to 'Yeni Kategori Ekle', new_kategori_path, class: 'btn btn-lg btn-primary' %>
+    <table class="table table-striped" style="margin-top:10px">
         <tr>
-            <td colspan="5">Başlık</td>
+            <td>Başlık</td>
+            <td  colspan="4">Kategori</td>
         </tr>
         <%= render @posts %>
     </table>

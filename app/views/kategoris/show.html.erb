@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ad:</strong>
+  <%= @kategori.ad %>
+</p>
+
+<p>
+  <strong>Aciklama:</strong>
+  <%= @kategori.aciklama %>
+</p>
+
+<%= link_to 'Edit', edit_kategori_path(@kategori) %> |
+<%= link_to 'Back', kategoris_path %>

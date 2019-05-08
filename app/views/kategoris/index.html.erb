@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Kategoris</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ad</th>
+      <th>Aciklama</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @kategoris.each do |kategori| %>
+      <tr>
+        <td><%= kategori.ad %></td>
+        <td><%= kategori.aciklama %></td>
+        <td><%= link_to 'Show', kategori %></td>
+        <td><%= link_to 'Edit', edit_kategori_path(kategori) %></td>
+        <td><%= link_to 'Destroy', kategori, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Kategori', new_kategori_path %>

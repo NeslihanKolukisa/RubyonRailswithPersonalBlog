@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_07_185236) do
+ActiveRecord::Schema.define(version: 2019_05_08_004014) do
 
   create_table "authors", force: :cascade do |t|
     t.string "name"
@@ -37,6 +37,13 @@ ActiveRecord::Schema.define(version: 2019_05_07_185236) do
     t.index ["sluggable_type", "sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id"
   end
 
+  create_table "kategoris", force: :cascade do |t|
+    t.string "ad"
+    t.text "aciklama"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "posts", force: :cascade do |t|
     t.integer "kategoriId"
     t.string "baslik"
@@ -51,7 +58,9 @@ ActiveRecord::Schema.define(version: 2019_05_07_185236) do
     t.integer "author_id"
     t.boolean "yayinlanma", default: false
     t.datetime "yayinlanma_tarihi"
+    t.integer "kategori_id"
     t.index ["author_id"], name: "index_posts_on_author_id"
+    t.index ["kategori_id"], name: "index_posts_on_kategori_id"
     t.index ["slug"], name: "index_posts_on_slug", unique: true
   end
 

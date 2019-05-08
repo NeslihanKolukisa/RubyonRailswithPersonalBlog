@@ -6,7 +6,11 @@
 					<div class="container">
 						<!-- logo -->
 						<div class="nav-logo">
+						   <% if author_signed_in? %>
+						   	<a href="" class="logo"><img src="../assets/logo.png" alt=""></a>
+                            <% else %>
 							<a href="" class="logo"><img src="assets/logo.png" alt=""></a>
+						   <% end %>
 						</div>
 						<!-- /logo -->
 

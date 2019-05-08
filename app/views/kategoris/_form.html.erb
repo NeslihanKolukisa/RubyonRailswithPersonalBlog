@@ -1,0 +1,27 @@
+<%= form_with(model: kategori, local: true) do |form| %>
+  <% if kategori.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(kategori.errors.count, "error") %> prohibited this kategori from being saved:</h2>
+
+      <ul>
+      <% kategori.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :ad %>
+    <%= form.text_field :ad %>
+  </div>
+
+  <div class="field">
+    <%= form.label :aciklama %>
+    <%= form.text_area :aciklama %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

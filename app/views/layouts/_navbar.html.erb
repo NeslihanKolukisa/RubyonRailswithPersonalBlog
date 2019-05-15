@@ -4,8 +4,15 @@
 				<!-- Main Nav -->
 				<div id="nav-fixed">
 					<div class="container">
-					    <p class="pull-right">	<%= link_to_unless_current "İngilizce", locale: "en" %>  |  
-<%= link_to_unless_current "Türkçe", locale: "tr" %></p>
+					    <p class="pull-right">	
+
+<p class="navbar-text pull-right"> <% if user_signed_in? %> <strong><%= current_user.email %></strong><% else %> <%= link_to "Üye ol", new_user_registration_path, :class => 'navbar-link' %> | <%= link_to "Giriş Yap", new_user_session_path, :class => 'navbar-link' %> <% end %> </p>
+                        <div class="nav-btns">
+							<button class="aside-btn"><i class="fa fa-bars"></i></button>
+						</div>
+<%= link_to_unless_current "İngilizce", locale: "en" %>  |  
+<%= link_to_unless_current "Türkçe", locale: "tr" %>
+</p>
 <div class="clear:both"></div>
 						<!-- logo -->
 						<div class="nav-logo">
@@ -22,10 +29,13 @@
 						<ul class="nav-menu nav">
 							 <li><%= link_to t('anasayfa'), root_path, class: "#{yield(:blog_active)}" %></li>
 							<li  class="cat-1"> <%= link_to  t('hakkimda'), hakkimda_path, class: "#{yield(:hakkimda_active)}" %></li>
+							<li  class="cat-3"> <%= link_to  "JavaScript", posts_path(tag: "JavaScript") %></li>
+							<li  class="cat-4"> <%= link_to  "Css", posts_path(tag: "Css") %></li>
+							<li  class="cat-1"> <%= link_to  "Jquery", posts_path(tag: "Jquery") %></li>
 							<li  class="cat-2"><%= link_to t('iletisim'), iletisim_path, class: "nav-link #{yield(:iletisim_active)}" %></li>
 						</ul>
 
-						<p class="navbar-text pull-right"> <% if user_signed_in? %> <strong><%= current_user.email %></strong><% else %> <%= link_to "Üye ol", new_user_registration_path, :class => 'navbar-link' %> | <%= link_to "Giriş Yap", new_user_session_path, :class => 'navbar-link' %> <% end %> </p>
+						
 
 						<!-- /nav -->
 
@@ -33,10 +43,7 @@
 							<!-- /nav -->
 
 						<!-- search & aside toggle -->
-						<div class="nav-btns">
-							<button class="aside-btn"><i class="fa fa-bars"></i></button>
-
-						</div>
+						
 						<!-- /search & aside toggle -->
 					</div>
 				</div><div style="clear:both"></div>

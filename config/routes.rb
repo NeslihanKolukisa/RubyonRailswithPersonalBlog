@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :kategoris
   devise_for :authors
   root "blog/posts#index"

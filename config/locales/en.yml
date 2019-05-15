@@ -30,4 +30,27 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  hello: "Welcome to my Web Page."
+  slider: "You can have a chance to get to know me a little while you are browsing through the pages. You can read my projects, my experiences and even the stories I sometimes write."
+  anasayfa: "Home"
+  hakkimda: "About me"
+  iletisim: "Contact"
+  iletisimBilgileri: "Contact information"
+  gonderiler: "All Posts"
+  kisisel: "Personal Web Page"
+  takip: "Follow me"
+  profil: "Edit profile"
+  gonderilerim: "My posts"
+  cikis: "Log out"
+  hakkimdaYazi: "Hi, I'm Neslihan KOLUKISA. I was born in 1997 in Ankara. I am a third year Software Engineering student at Fırat University. I am interested in areas such as game development, artificial intelligence, image processing, web and mobile development and I am trying to develop various projects on this subject."
+  projelerim: "My projects"
+  projebbaslik: "Android Mobile Development"
+  projebicerik: "A project that provides information about how to make products of various categories to users, information about the materials to be used, and the duration of their use."
+  detaylink: "Click for details"
+  projeibaslik: "ASP.NET MVC PROJECT"
+  projeiicerik: "On the Internet,a project that creates a virtual library, simplifies access to books, and facilitates book access."
+  projeubaslik: "RASPBERRY PI PROJECT"
+  projeuicerik: "LED control is provided with sound using Raspberry pi."
+  projedbaslik: "ARDUINO"
+  projedicerik: "4-axis robot arm has been developed."
+

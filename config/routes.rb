@@ -13,7 +13,7 @@ Rails.application.routes.draw do
          put 'unpublish' => 'posts#unpublish', on: :member
      end
   end
-  
+
   scope module: 'blog' do 
        get 'hakkimda' => 'pages#hakkimda', as: :hakkimda
        get 'iletisim' => 'pages#iletisim', as: :iletisim

@@ -4,6 +4,9 @@
 				<!-- Main Nav -->
 				<div id="nav-fixed">
 					<div class="container">
+					    <p class="pull-right">	<%= link_to_unless_current "İngilizce", locale: "en" %>  |  
+<%= link_to_unless_current "Türkçe", locale: "tr" %></p>
+<div class="clear:both"></div>
 						<!-- logo -->
 						<div class="nav-logo">
 						   <% if author_signed_in? %>
@@ -17,11 +20,13 @@
 						<!-- nav -->
 						<!-- nav -->
 						<ul class="nav-menu nav">
-							 <li><%= link_to 'Blog', root_path, class: "#{yield(:blog_active)}" %></li>
-							<li  class="cat-1"> <%= link_to 'Hakkımda', hakkimda_path, class: "#{yield(:hakkimda_active)}" %></li>
-							<li  class="cat-2"><%= link_to 'İletişim', iletisim_path, class: "nav-link #{yield(:iletisim_active)}" %></li>
+							 <li><%= link_to t('anasayfa'), root_path, class: "#{yield(:blog_active)}" %></li>
+							<li  class="cat-1"> <%= link_to  t('hakkimda'), hakkimda_path, class: "#{yield(:hakkimda_active)}" %></li>
+							<li  class="cat-2"><%= link_to t('iletisim'), iletisim_path, class: "nav-link #{yield(:iletisim_active)}" %></li>
 						</ul>
+
 						<p class="navbar-text pull-right"> <% if user_signed_in? %> <strong><%= current_user.email %></strong><% else %> <%= link_to "Üye ol", new_user_registration_path, :class => 'navbar-link' %> | <%= link_to "Giriş Yap", new_user_session_path, :class => 'navbar-link' %> <% end %> </p>
+
 						<!-- /nav -->
 
 						<!-- search & aside toggle -->
@@ -43,12 +48,12 @@
 					<div class="section-row">
 					    <%= current_user.email %>
 						<ul class="nav-aside-menu">
-						    	<li><%= link_to 'Profili düzenle', edit_user_registration_path, class:" #{yield(:author)}" %></li>
+						    	<li><%= link_to t('profil'), edit_user_registration_path, class:" #{yield(:author)}" %></li>
 						    <% if  current_user.email== "neslihan.262@gmail.com" %>
-							    <li><%= link_to 'Gönderilerim', authors_posts_path, class:" #{yield(:author)}" %></li>
+							    <li><%= link_to t('gonderilerim'), authors_posts_path, class:" #{yield(:author)}" %></li>
 							<% end %>
 
-							<li><%= link_to 'Çıkış', destroy_user_session_path, method: :delete %></li>
+							<li><%= link_to t('cikis'), destroy_user_session_path, method: :delete %></li>
 						</ul>
 					</div>
 					<!-- /nav -->
@@ -66,7 +71,7 @@
 				</div>
 				<!-- Aside Nav -->
             <% end %>
-			
+
 			<!-- /Nav -->
 
    

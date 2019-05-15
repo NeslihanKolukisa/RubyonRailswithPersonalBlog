@@ -12,6 +12,12 @@ module Blog
       def show
              @post = stroage.friendly.find(params[:id])
       end
+      
+        
+    before_action :set_locale
+    def set_locale
+      I18n.locale=params[:locale]||I18n.default_locale
+    end
     
       private
       

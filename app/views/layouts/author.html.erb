@@ -39,7 +39,7 @@
 							</div>
 							<ul class="footer-nav">
 								<li><a href="#">Neslihan Kolukısa</a></li>
-								<li><a href="#">Kişisel Web Sayfası</a></li>
+								<li><a href="#"><%= t('kisisel') %></a></li>
 							</ul>
 							<div class="footer-copyright">
 								<span>&copy; <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
@@ -52,10 +52,10 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script>
 						<div class="row">
 							<div class="col-md-6">
 								<div class="footer-widget">
-									<h3 class="footer-title">Hakkımda</h3>
+									<h3 class="footer-title"><%= t('hakkimda') %></h3>
 									<ul class="footer-links">
-										<li><%= link_to 'Hakkımda', hakkimda_path, class: "#{yield(:hakkimda_active)}" %></li>
-										<li><%= link_to 'İletişim', iletisim_path, class: "#{yield(:iletisim_active)}" %></li>
+										<li><%= link_to  t('hakkimda'), hakkimda_path, class: "#{yield(:hakkimda_active)}" %></li>
+										<li><%= link_to t('iletisim'), iletisim_path, class: "#{yield(:iletisim_active)}" %></li>
 									</ul>
 								</div>
 							</div>
@@ -65,7 +65,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script>
 
 					<div class="col-md-3">
 						<div class="footer-widget">
-							<h3 class="footer-title">Beni takip edin</h3>
+							<h3 class="footer-title"><%= t('takip') %></h3>
 
 							<ul class="footer-social">
 								<li><a target="_blank" href="https://www.facebook.com/profile.php?id=100001206050650"><i class="fa fa-facebook"></i></a></li>

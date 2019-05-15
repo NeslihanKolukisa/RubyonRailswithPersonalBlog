@@ -4,10 +4,10 @@
 					<div class="row">
 						<div class="col-md-10">
 							<ul class="page-header-breadcrumb">
-								<li><%= link_to 'Blog', root_path, class: "#{yield(:blog_active)}" %></li>
-								<li>İletişim</li>
+								<li><%= link_to t('anasayfa') , root_path, class: "#{yield(:blog_active)}" %></li>
+								<li><%= t('iletisim') %></li>
 							</ul>
-							<h1>İletişim</h1>
+							<h1><%= t('iletisim') %></h1>
 						</div>
 					</div>
 				</div>
@@ -18,42 +18,14 @@
 				<div class="row">
 					<div class="col-md-6">
 						<div class="section-row">
-							<h3>İletişim Bilgileri</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+							<h3><%= t('iletisimBilgileri') %></h3>
 							<ul class="list-style">
-								<li><p><strong>Email:</strong> <a href="#">Webmag@email.com</a></p></li>
-								<li><p><strong>Phone:</strong> 213-520-7376</p></li>
-								<li><p><strong>Address:</strong> 3770 Oliver Street</p></li>
+								<li><p><strong>Email:</strong> <a href="mailto:info@neslihankolukisa.com">info@neslihankolukisa.com</a></p></li>
+								
 							</ul>
 						</div>
 					</div>
-					<div class="col-md-5 col-md-offset-1">
-						<div class="section-row">
-							<h3>Send A Message</h3>
-							<form>
-								<div class="row">
-									<div class="col-md-7">
-										<div class="form-group">
-											<span>Email</span>
-											<input class="input" type="email" name="email">
-										</div>
-									</div>
-									<div class="col-md-7">
-										<div class="form-group">
-											<span>Subject</span>
-											<input class="input" type="text" name="subject">
-										</div>
-									</div>
-									<div class="col-md-12">
-										<div class="form-group">
-											<textarea class="input" name="message" placeholder="Message"></textarea>
-										</div>
-										<button class="primary-button">Submit</button>
-									</div>
-								</div>
-							</form>
-						</div>
-					</div>
+		
 				</div>
 				<!-- /row -->
 			</div>

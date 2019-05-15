@@ -1,0 +1,27 @@
+tr:
+    hello: "Web Sayfama Hoşgeldiniz."
+    slider: "Sayfalar arasında gezerken beni biraz olsun tanıma fırsatı bulabilirsiniz. Projelerimi, tecrübelerimi ve hatta arada sırada esip yazdığım hikayeleri okuyabilirsiniz."
+    anasayfa: "Anasayfa"
+    hakkimda: "Hakkımda"
+    iletisim: "İletişim"
+    iletisimBilgileri: "İletişim Bilgileri"
+    gonderiler: "Tüm Gönderiler"
+    kisisel: "Kişisel Web Sayfası"
+    takip: "Beni takip edin"
+    profil: "Profili düzenle"
+    gonderilerim: "Gönderilerim"
+    cikis: "Çıkış"
+    hakkimdaYazi: "Merhaba, ben Neslihan KOLUKISA. 1997 yılında Ankara’ da doğdum. Fırat Üniversitesi 3. sınıf Yazılım Mühendisliği öğrencisiyim. Oyun geliştirme, yapay zeka, görüntü işleme, web ve mobil geliştirme gibi alanlara ilgi duyuyorum ve bu alanlarda çeşitli projeler üzerinde çalışıyorum. "
+    projelerim: "Projelerim"
+    projebbaslik: "Android Mobil Geliştirme"
+    projebicerik: "Çeşitli kategorilerdeki ürünlerin kullanıcılara nasıl yapılacağı hakkında açıklama, kullanılacak malzemeler hakkında bilgi, yapılma süresi bilgiler sunan bir proje."
+    detaylink: "Detaylı bilgi için tıklayınız"
+    projeibaslik: "ASP.NET MVC PROJESİ"
+    projeiicerik: "İnternet ortamında, sanal bir kütüphane oluşturarak, kullanıcıların kitaplara erişimleri basite indirgeyerek, kitap erişimini kolaylaştıran kitap okumalarını, incelemeleri sağlayan bir proje."
+    projeubaslik: "RASPBERRY Pİ PROJESİ"
+    projeuicerik: "Raspberry pi kullanarak ses ile led kontrolü sağlanmıştır."
+    projedbaslik: "ARDUINO"
+    projedicerik: "4 eksenli robot kol geliştirilmiştir."
+
+
+    

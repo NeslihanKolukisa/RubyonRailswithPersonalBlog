@@ -1,6 +1,6 @@
 <% provide(:page_title, 'Tüm Yazılar') %>
 <% provide(:author, 'active') %>
-
+<div class="container">
 <div class="row">
     <div>
     <%= link_to 'Yeni yazı', new_authors_post_path, class: 'btn btn-primary btn-lg' %>
@@ -12,4 +12,4 @@
         </tr>
         <%= render @posts %>
     </table>
-</div>
+</div></div>

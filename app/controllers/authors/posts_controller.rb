@@ -81,7 +81,7 @@ module Authors
     
         # Never trust parameters from the scary internet, only allow the white list through.
         def post_params
-          params.require(:post).permit(:kategoriId, :baslik, :aciklama, :icerik, :foto, :tarih, :okunma, :tag_list)
+          params.require(:post).permit(:baslik, :aciklama, :icerik, :tag_list, :resim)
         end
     end
 end

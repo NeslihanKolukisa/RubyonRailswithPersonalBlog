@@ -27,11 +27,6 @@
           </div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">
-                 <div class="field">
-                    <%= form.label :kategori %><br>
-                  </div>
-            </li>
-            <li class="list-group-item">
               <div class="field">
                 <%= form.label :baslik %><br>
                 <%= form.text_field :baslik, class:'form-control' %>
@@ -51,23 +46,11 @@
             </li>
              <li class="list-group-item">
                  <div class="field">
-                <%= form.label :foto %><br>
-                <%= form.text_field :foto, class:'form-control' %>
+                <%= form.label :'Resim' %><br>
+                <%= form.file_field :resim,  class:'form-control' %>
               </div>
             </li>
-            <li class="list-group-item">
-                <div class="field">
-                    <%= form.label :tarih %><br>
-                    <%= form.datetime_select :tarih, class:'form-control' %>
-                  </div>
 
-            </li>
-            <li class="list-group-item">
-                <div class="field">
-                <%= form.label :okunma %><br>
-                <%= form.number_field :okunma, class:'form-control' %>
-              </div>
-            </li>
             <li class="list-group-item">
                     <div class="actions">
                     <%= form.submit "Kaydet", class:'btn btn-success btn-block' %>
@@ -78,7 +61,6 @@
         <% if @post.persisted? %>
             <%= link_to 'Show', @post %> |
         <% end %>
-        <%= link_to 'Back', authors_posts_path %>
     </div>
     
     <div class="col-md-8">

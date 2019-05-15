@@ -1,6 +1,7 @@
 <% provide(:page_title, 'Yeni Yazı') %>
 <% provide(:author, 'active') %>
-
+<div class="container">
 <%= render 'form', post: @post, url: authors_posts_url  %>
 
-<%= link_to 'Back', authors_posts_path %>
+<%= link_to 'Geri dön', authors_posts_path %>
+</div>

@@ -3,7 +3,7 @@
 					<div class="col-md-4">
 						<div class="post">
 						    <%= link_to  post, class: 'post-img' do  %>
-						    	<img src="https://colorlib.com/preview/theme/webmag/img/post-3.jpg" alt="">
+						    	<%= image_tag post.resim.url(:thumb) if post.resim? %>
 						    <% end %>
 						
 							<div class="post-body">

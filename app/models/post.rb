@@ -19,13 +19,17 @@
 #
 
 class Post < ApplicationRecord
+    
+    has_attached_file :resim, styles: { medium: "670x402>", thumb: "360x216>" }, default_url:
+"/images/:style/missing.png"
+validates_attachment_content_type :resim, content_type: /\Aimage\/.*\z/
   acts_as_taggable # Alias for acts_as_taggable_on :tags
   extend FriendlyId
   friendly_id :baslik, use: :slugged
   
   belongs_to :author, :optional => true
   
-  PER_PAGE = 3
+  PER_PAGE = 6
   
   scope :most_recent, -> {order(yayinlanma_tarihi: :desc)}
   scope :yayinlanma, -> {where(yayinlanma: :true)}

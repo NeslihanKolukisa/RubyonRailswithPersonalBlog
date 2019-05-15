@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_08_004014) do
+ActiveRecord::Schema.define(version: 2019_05_15_075935) do
 
   create_table "authors", force: :cascade do |t|
     t.string "name"
@@ -59,6 +59,10 @@ ActiveRecord::Schema.define(version: 2019_05_08_004014) do
     t.boolean "yayinlanma", default: false
     t.datetime "yayinlanma_tarihi"
     t.integer "kategori_id"
+    t.string "resim_file_name"
+    t.string "resim_content_type"
+    t.bigint "resim_file_size"
+    t.datetime "resim_updated_at"
     t.index ["author_id"], name: "index_posts_on_author_id"
     t.index ["kategori_id"], name: "index_posts_on_kategori_id"
     t.index ["slug"], name: "index_posts_on_slug", unique: true

@@ -1,6 +1,14 @@
 @import "bootstrap";
 @import "colors";
-
+.carousel-item {
+  height: 100vh;
+  min-height: 350px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -20,8 +28,7 @@ body
     background-color: #bababa;
 }
 .apple_pagination {
-  background: #f1f1f1;
-  border: 1px solid #e5e5e5;
+
   text-align: center;
   padding: 1em;
   cursor: default; }
@@ -233,9 +240,7 @@ RESPONSIVE
      color: #fff;
      opacity: 0.9;
 }
- .section {
-     padding-top: 70px;
-}
+
  .section.section-grey {
      background-color: #fbfbfd;
      border-bottom: 1px solid #eceef2;
@@ -276,7 +281,6 @@ RESPONSIVE
      visibility: visible;
 }
  #nav-fixed {
-     position: fixed;
      left: 0;
      right: 0;
      top: 0;

@@ -17,15 +17,17 @@
                                    <%= f.email_field :email, autofocus: true, placeholder:"Email", autocomplete: "email" %>
                             </div>
                             <div class="form-group">
-                                <label for="your_pass"><i class="fa fa-user"></i></label>
+                                <label for="your_pass"><i class="fa fa-key"></i></label>
                                    <%= f.password_field :password, placeholder:"Şifre", autocomplete: "current-password" %>
-                            </div>
+                           </div>
+                             <div class="form-group">
                               <% if devise_mapping.rememberable? %>
                                 <div class="field">
                                   <%= f.check_box :remember_me %>
                                   <%= f.label :remember_me %>
                                 </div>
                               <% end %>
+                               </div>
                             <div class="form-group form-button">
                                  <%= f.submit "Giriş yap", class:"form-submit" %>
                             </div>

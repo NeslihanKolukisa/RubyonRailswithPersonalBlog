@@ -26,12 +26,14 @@
 							    <center><%= image_tag @post.resim.url(:medium) if @post.resim? %></center>
 								<p> <%= @post.icerik.html_safe %></p>
 							<div class="author-bio">
-							    <h4><%= @post.author.name %></h4>
+							   <h4> Yazar: <%= @post.author.name %></h4>
 							    <h5 class="bio"><%= @post.author.bio %></h5>
 							</div>
+							     <% if user_signed_in? %>
 							<div id="disqus_thread">
 							     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 							</div>
+							<% end %>
 						</div>
 
 						<!-- ad -->

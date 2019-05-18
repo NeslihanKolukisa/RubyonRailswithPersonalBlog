@@ -6,28 +6,21 @@
   <div class="signin-content">
                     <div class="signin-image">
                         <figure><img src="../assets/signin-image.jpg" alt="sing up image"></figure>
-                        <span class="signup-image-link">Hesap Oluştur</span><%= render "devise/shared/links" %>
+                        <span class="signup-image-link">Hesabınız yok mu?</span><%= render "devise/shared/links" %>
                     </div>
 
                     <div class="signin-form">
                         <h2 class="form-title">Giriş yap</h2>
                         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
                             <div class="form-group">
-                                <label for="Email"><i class="fa fa-user"></i></label>
+                                <label for="Email" style="position:absolute"><i class="fa fa-user"></i></label>
                                    <%= f.email_field :email, autofocus: true, placeholder:"Email", autocomplete: "email" %>
                             </div>
                             <div class="form-group">
-                                <label for="your_pass"><i class="fa fa-key"></i></label>
+                                <label for="your_pass" style="position:absolute"><i class="fa fa-key"></i></label>
                                    <%= f.password_field :password, placeholder:"Şifre", autocomplete: "current-password" %>
                            </div>
-                             <div class="form-group">
-                              <% if devise_mapping.rememberable? %>
-                                <div class="field">
-                                  <%= f.check_box :remember_me %>
-                                  <%= f.label :remember_me %>
-                                </div>
-                              <% end %>
-                               </div>
+                             
                             <div class="form-group form-button">
                                  <%= f.submit "Giriş yap", class:"form-submit" %>
                             </div>

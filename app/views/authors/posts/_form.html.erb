@@ -1,4 +1,5 @@
-<%= form_with(model: post, url: url, local: true) do |form| %>
+ <div class="container">
+ <%= form_with(model: post, url: url, local: true) do |form| %>
   <% if post.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
@@ -10,13 +11,15 @@
       </ul>
     </div>
   <% end %>
-
+<p></p>
+<div style="margin-top:20px">
 <div class="row">
     <div class="col-md-4">
         <div class="card">
           <div class="card-body">
+              
               <% if @post.new_record? %>
-                <h5 class="card-title">Yeni yazı</h5>
+                <h5 class="card-title"><%= t('yeniyazi') %></h5>
               <% else %>
               <h5 class="card-title">
                   <b>Düzenle</b>
@@ -28,39 +31,37 @@
           <ul class="list-group list-group-flush">
             <li class="list-group-item">
               <div class="field">
-                <%= form.label :baslik %><br>
+                <%= form.label t('baslik') %>
                 <%= form.text_field :baslik, class:'form-control' %>
               </div>
             </li>
             <li class="list-group-item">
                    <div class="field">
-                    <%= form.label :aciklama %><br>
+                    <%= form.label t('aciklama') %><br>
                     <%= form.text_area :aciklama, class:'form-control' %>
                   </div>
             </li>
              <li class="list-group-item">
                    <div class="field">
-                    <%= form.label 'Etiketler' %><br>
+                    <%= form.label t('etiketler') %><br>
                     <%= form.text_area :tag_list, class:'form-control' %>
                   </div>
             </li>
              <li class="list-group-item">
                  <div class="field">
-                <%= form.label :'Resim' %><br>
+                <%= form.label t('resim') %><br>
                 <%= form.file_field :resim,  class:'form-control' %>
               </div>
             </li>
 
             <li class="list-group-item">
                     <div class="actions">
-                    <%= form.submit "Kaydet", class:'btn btn-success btn-block' %>
+                    <%= form.submit t('kaydet'), class:'btn btn-success btn-block' %>
                   </div>
             </li>
           </ul>
         </div>
-        <% if @post.persisted? %>
-            <%= link_to 'Show', @post %> |
-        <% end %>
+
     </div>
     
     <div class="col-md-8">
@@ -69,4 +70,6 @@
   </div>
     </div>
 </div>
+</div>
 <% end %>
+</div>

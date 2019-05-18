@@ -15,16 +15,6 @@
   	<%= render 'layouts/navbar' %>
     <!-- section -->
 		<div class="section">
-		    <% if flash.any? %>
-                <% flash.keys.each do |key| %>
-                <div class="alert alert-<%= key.to_s %> alert-dismissible" role="alert">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                      <shttps://cdn.jsdelivr.net/emojione/assets/3.1/png/128/1f4c4.pngpan aria-hidden="true">&times;</span>
-                    </button>
-                  <%= flash[key] %>
-                </div>
-                <% end %>
-            <% end %>
         <%= yield %>
     </div>
    <footer id="footer">
@@ -35,7 +25,9 @@
 					<div class="col-md-5">
 						<div class="footer-widget">
 							<div class="footer-logo">
-								<a href="index.html" class="logo"><img src="../assets/logo.png" alt=""></a>
+								 <%= link_to   root_path, class: "#{yield(:blog_active)}" do  %>
+								 <img src="http://tubitak.ozkanunsal.com/ruby/logo.png" alt="">
+								 <% end %>
 							</div>
 							<ul class="footer-nav">
 								<li><a href="#">Neslihan Kolukısa</a></li>

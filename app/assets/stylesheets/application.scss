@@ -381,7 +381,6 @@ input[type=checkbox]:not(old):checked + label > span:before {
   width: auto; }
 
 label {
-  position: absolute;
   left: 0;
   top: 50%;
   transform: translateY(-50%);

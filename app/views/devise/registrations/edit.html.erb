@@ -5,7 +5,7 @@
                     <div class="signup-form">
                        <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
                             <div class="form-group">
-                                <label for="name"><i class="fa fa-user"></i></label>
+                                <label style="position:absolute" for="name"><i class="fa fa-user"></i></label>
                                 <%= f.email_field :email, autofocus: true,  autocomplete: "email" %>
                             </div>
                             
@@ -23,12 +23,12 @@
                                     <% end %>
                             </div>
                             <div class="form-group">
-                               <label for="name"><i class="fa fa-key"></i></label>
+                               <label style="position:absolute" for="name"><i class="fa fa-key"></i></label>
                                 <%= f.password_field :password_confirmation,placeholder:"Yeni şifreyi tekrar girin", autocomplete: "new-password" %>
                               </div>
                               <div class="form-group">
                                 <i>(değişikliklerinizi onaylamak için mevcut şifrenize ihtiyacımız var)</i><br>
-                                <label for="name"><i class="fa fa-key"></i></label>
+                                <label style="position:absolute" for="name"><i class="fa fa-key"></i></label>
                                 <%= f.password_field :current_password,placeholder:"Eski şifre",   autocomplete: "current-password" %>
                               </div>
                             
